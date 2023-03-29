@@ -1,0 +1,346 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    word-wrap: break-word;
+    font-family: "Karla", sans-serif;
+    font-size: 68.5%;
+}
+
+.page{
+   margin: 0 auto;
+}
+
+/*PARALLAX CONTAINER */
+.parallax{
+    perspective: 300px;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;   
+    perspective-origin: center;
+}
+
+/* CONTAINER FOR GROUPS */
+.parallax__group{
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+   
+}
+
+/* LAYER CLASS */
+.parallax__layer{
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+/* LAYERS */
+
+.parallax__layer--front{
+    /* background-color: green; */
+    transform: translateZ(90px) scale(.7);
+    z-index: 4;
+}
+
+.parallax__layer--base{
+    transform: translateZ(0px);
+    z-index: 3;
+}
+
+.parallax__layer--bg{
+    transform: translateZ(-300px) scale(2);
+    z-index: 2;
+    left: -50px;
+ 
+}
+
+
+
+.parallax__layer--deep{
+    transform: translateZ(-600px) scale(3);
+    left: -50px; 
+    z-index: 1;
+}
+
+
+
+.buffer {
+    height: 10em;
+}
+
+
+/* BACKGROUND COLORS */
+.bg_blue{
+    background: linear-gradient(to right, #01394B 30%, #055E7C 70%, #32829D 100%);
+}
+
+.bg_dark{
+    background: #1D2128
+}
+
+.bg_white{
+    background: white;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   text-align: justify;
+    color: white;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    min-height: 80%;
+    width: 80%;
+    padding: 10px;
+}
+
+.content--centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content--bottom{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+.content::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3A3F48;
+    z-index: -1;
+    opacity: .65;
+}
+.content__paragraph{
+    padding: 10px;
+}
+
+.black{
+    color: black;
+}
+
+#git_back{
+    background-image: url("img/git.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#git_base{
+    background-image: url("img/git-foreground.svg");
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#code_base{
+    background-image: url("img/code_thinking.svg");
+    background-attachment: fixed;
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#portfolio_base{
+    /* position: absolute;
+    top: 0; */
+    background-image: url("img/portfolio.svg");
+    background-attachment: fixed;
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.parallax__debug{
+    transform: translate3d(700px, 0, -700px) rotateY(30deg);
+
+}
+#blog_base{
+    /* position: absolute;
+    top: 0; */
+    background-image: url("img/blog.svg");
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#blog_bg{
+    /* position: absolute;
+    top: 0; */
+    background-image: url("img/blog_bg.svg");
+    height:100%;
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.parallax__shadow{
+    box-shadow: 0 0 0 2px red;
+    opacity: .9;
+}
+#blog_deep{
+    /* position: absolute;
+    top: 0; */
+    background-image: url("img/blog_deep.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#react_base{
+    background-image: url("img/react.svg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@media (max-width: 45rem) {
+ .content{
+    font-size: 1.8rem;
+ }
+}
+
+.image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 10px;
+    float: none;
+
+}
+
+.image::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3A3F48;
+    z-index: 5;
+   
+}
+.image--centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+}
+.image__header {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-size: 3.8rem;
+}
+h2 {
+    text-transform: uppercase;
+}
+
+button {
+    position: relative;
+    min-width: 10rem;
+    max-width: 10rem;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    padding: .5em;
+    border: 3px solid #c66600;
+    border-radius: 300px;
+    font-size: 20px;
+    z-index: 1;
+    transition: all 1s;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    border-radius: 300px;
+    background: linear-gradient(to right, #c66600, #F68611 70%);
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    top: 0;
+    z-index: -1;
+    transition: right .5s ease-in;
+   
+
+}
+
+button:hover {
+    border: 3px solid transparent;
+    border-radius: 300px;
+    background: transparent;
+    color: #e2dbdb;
+    transform: scale(1.1);
+}
+
+button:hover::before {
+    right: 0;
+
+}
+#debug{
+    position: fixed;
+    margin-top: 50px;
+    margin-left: 15px;
+    background-color: #1D2128;
+}
+
+
+.fade-in{
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.fade-in--left{
+
+    transform: translateX(-100%);
+}
+
+.fade-in--right{
+    transform: translateX(100%);  
+    transform: translateY(50%);
+    margin-left: 50px;
+    border-left:  3px solid #1D2128;
+    /* display: inline-block;   */
+}
+.fade-in.active{
+    transform:  translateX(-50%); 
+    opacity: 1;
+}
