@@ -6,7 +6,7 @@ function fadeIn() {
     const innerHeight = window.innerHeight;
     for (let i = 0; i < elements.length; i++) {
         const elementTop = elements[i].getBoundingClientRect().top;
-        console.log(elementTop)
+        // console.log(elementTop)
         if (elementTop < innerHeight - breakpoint) {
              elements[i].classList.add("active")
             
@@ -23,7 +23,7 @@ document.querySelector('.parallax').addEventListener('scroll', fadeIn);
 //add style and animation to embedded svg frame
 window.addEventListener('load', function () {
     const ellipse = document.querySelector('#react');
-    console.log(ellipse)
+    // console.log(ellipse)
     const frame = ellipse.contentWindow.document;
     const styleElement = frame.createElementNS("http://www.w3.org/2000/svg", "style");
     let rotate = 0;
