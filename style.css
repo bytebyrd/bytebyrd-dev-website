@@ -1,3 +1,11 @@
+/* Insert font */
+@font-face {
+    font-family: 'Aquire';
+    src: url('fonts/Aquire-BW0ox.otf'),
+         url('fonts/AquireBold-8Ma60.otf'),
+         url('fonts/AquireLight-YzE0o.otf');
+}
+
 
 html, body{
     margin: 0;
@@ -260,6 +268,8 @@ html, body{
 }
 
 h1{
+    font-family: 'Aquire';
+    font-weight: 300;
     text-transform: uppercase;
     text-align: center;
     color: white;
